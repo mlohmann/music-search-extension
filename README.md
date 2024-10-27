@@ -11,6 +11,10 @@ This Chrome extension needs to be installed in Developer Mode since it's not pub
 5. Click "Load unpacked" button that appears after enabling Developer mode
 6. Select the directory containing the extension files
 
+## Usage
+1. Once installed, highlight any text, right click, then select your prefered search method
+2. You can open the extension options to select only your favorite streaming services
+
 ## Important Notes
 
 - The extension needs to remain in the same location on your computer after installation
