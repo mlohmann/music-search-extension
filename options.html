@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Music Search Options</title>
+  <style>
+    body{
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #e3ecf0;
+    }
+
+    button{
+      background: #ffffff;
+      border: 2px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .checkbox-wrapper {
+      position: relative;
+      display: inline-block;
+      margin: 12px;
+    }
+
+    .checkbox-wrapper input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    .checkbox-wrapper .checkmark {
+      position: relative;
+      display: inline-block;
+      height: 18px;
+      width: 18px;
+      background: #ffffff;
+      border: 2px solid #e0e0e0;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    /* Hover effect */
+    .checkbox-wrapper input[type="checkbox"]:hover~.checkmark {
+      border-color: #2196F3;
+      box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);
+    }
+
+    /* Checked state */
+    .checkbox-wrapper input[type="checkbox"]:checked~.checkmark {
+      background: #2196F3;
+      border-color: #2196F3;
+    }
+
+    /* Checkmark icon */
+    .checkbox-wrapper .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 50%;
+      top: 45%;
+      width: 6px;
+      height: 12px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    /* Show checkmark when checked */
+    .checkbox-wrapper input[type="checkbox"]:checked~.checkmark:after {
+      display: block;
+    }
+
+    /* Focus state */
+    .checkbox-wrapper input[type="checkbox"]:focus~.checkmark {
+      box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.2);
+    }
+
+    /* Disabled state */
+    .checkbox-wrapper input[type="checkbox"]:disabled~.checkmark {
+      background: #f5f5f5;
+      border-color: #e0e0e0;
+      cursor: not-allowed;
+    }
+
+    /* Label styling */
+    .checkbox-wrapper label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      color: #333;
+      margin-bottom: 0.5em;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Choose your preferred music platforms</h1>
+  <div id="options" class="checkbox-wrapper"> </div>
+  <br/>
+  <button id="save">Save</button>
+  <script src="options.js"></script>
+
+</body>
+
+</html>
